@@ -1,11 +1,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: '${{ secrets.API_KEY }}',
-    authDomain: '${{ secrets.AUTH_DOMAIN }}',
-    projectId: '${{ secrets.PROJECT_ID }}',
-    storageBucket: '${{ secrets.STORAGE_BUCKET }}',
-    messagingSenderId: '${{ secrets.MESSAGING_SENDER_ID }}',
-    appId: '${{ secrets.APP_ID }}'
+    apiKey: '${API_KEY}',
+    authDomain: '${AUTH_DOMAIN}',
+    projectId: '${PROJECT_ID}',
+    storageBucket: '${STORAGE_BUCKET}',
+    messagingSenderId: '${MESSAGING_SENDER_ID}',
+    appId: '${APP_ID}'
   }
 };
