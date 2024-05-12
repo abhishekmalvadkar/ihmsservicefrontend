@@ -20,15 +20,6 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Replace placeholders in environment.ts
-      run: |
-          sed -i "s/\${API_KEY}/${{ secrets.API_KEY }}/g" src/environments/environment.ts
-          sed -i "s/\${AUTH_DOMAIN}/${{ secrets.AUTH_DOMAIN }}/g" src/environments/environment.ts
-          sed -i "s/\${PROJECT_ID}/${{ secrets.PROJECT_ID }}/g" src/environments/environment.ts
-          sed -i "s/\${STORAGE_BUCKET}/${{ secrets.STORAGE_BUCKET }}/g" src/environments/environment.ts
-          sed -i "s/\${MESSAGING_SENDER_ID}/${{ secrets.MESSAGING_SENDER_ID }}/g" src/environments/environment.ts
-          sed -i "s/\${APP_ID}/${{ secrets.APP_ID }}/g" src/environments/environment.ts
-
     - name: Build
       run: npm run build
 
