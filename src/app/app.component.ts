@@ -17,8 +17,13 @@ export class AppComponent {
   signInWithGoogle() {
     this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
       .then((result) => {
-        this.user = result.additionalUserInfo?.profile;
-        this.isLoggedIn = true;
+        console.log(result);
+		result.user?.getIdToken().then(token => {
+			console.log(token);
+			console.log(result.user);
+			this.user = result.user;
+			this.isLoggedIn = true;
+		});
       })
       .catch((error) => {
         // Handle errors
